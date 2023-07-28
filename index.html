@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic" rel="stylesheet" />
+    <style>
+        *{
+            font-family: Josefin Sans;
+        }
+        .row{
+            display: flex;align-items: center;
+        }
+        body{
+            background-image: linear-gradient(0deg,#f2bec866,#df728851),url(https://e0.pxfuel.com/wallpapers/452/6/desktop-wallpaper-poster-movie-film-movies-posters-bollywood-movie-collage.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+        .head{
+            font-size: 90px;color: white;text-align: center;letter-spacing: 5px;
+        }
+        .detail-title{
+            font-weight: bold;
+            color: crimson;
+            font-size: 1.1em;
+        }
+        header{
+            padding:100px 50px;
+            background-color: #f1f1f1;text-align: center;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.636);
+        }
+        .card{
+            width:300px;background-color: #fff;border-radius: 10px;transition-duration: 0.2s;
+            box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.801);
+            transform: scale(0.9)rotateY('10deg') ;font-size: 40px;
+        }
+        
+        .row{
+            display: flex;align-items: center;
+        }
+        .card img{
+            width: 100%;
+        }
+        .card:hover{
+            transform: scale(1.5) rotate(10deg) ;
+        }
+        .card2{
+            border: 2px solid crimson;
+            background-color: rgba(255, 202, 213, 0.403);
+            border-radius: 10px;
+            box-shadow: 4px 5px 10px 2px rgba(0, 0, 0, 0.334);
+            margin: 30px 60px;
+            backdrop-filter: blur(20px);
+        }
+        .detail{
+            font-size: 1.2em;
+            color: rgb(77, 0, 15);
+            margin-left: 50px;
+        }
+        #search{
+            height: 0.7cm; width: 25cm;
+           
+        }
+        .search-btn{
+            background-color: crimson;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+
+   
+      
+    </style>
+</head>
+<body>
+    <h1 class="head"><span id="project-title"></span>  Finder</h1>
+    
+    <header style="background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=f04d2786c16b18e1ee49ca8128b65221);">
+        <h1 style="font-size: 40px;text-align: center;color: black;">SEARCH YOUR MOVIE HERE </h1>      
+        <input id="search" type="text">
+        <button class="search-btn" onclick="getInputData()">Search</button>
+    </header>
+    
+
+    
+    <div class="row">
+       
+        <div class="card">
+            <img src="https://qqcdnpictest.mxplay.com/pic/6574fa0a788a4908e9e5927cbbfaf378/en/2x3/320x480/8f6b8d2e87dafee76f1a628ae0b9e3bf_1280x1920.webp" alt="">
+           
+        </div>
+            <div class="card">
+                <img src="https://qqcdnpictest.mxplay.com/pic/500f8c5e98bf9d06e109d8b880a76342/en/2x3/320x480/85429f6de5c97988fd403bd5ebebe38a_1280x1920.webp" alt="">
+               
+            </div>
+            <div class="card">
+                <img src="https://qqcdnpictest.mxplay.com/pic/aeff9b28798ffe7e49a926a48892da8b/en/2x3/320x480/03fa99bff47bf0ea494c658d995f5124_1280x1920.webp" alt="">
+               
+            </div>
+        <div class="card">
+            <img src="https://qqcdnpictest.mxplay.com/pic/33aa82cbc96dd186d0c1cf712fbecbc0/en/2x3/320x480/test_pic1655106752118.webp" alt="">
+            
+        </div>
+        <div class="card">
+            <img src="https://qqcdnpictest.mxplay.com/pic/11f8a5d327346aeb9af992dc663a92de/en/2x3/320x480/test_pic1575378678583.webp" alt="">
+           
+        </div>
+        <div class="card">
+            <img src="https://qqcdnpictest.mxplay.com/pic/baa1a6e8a6bceb461eab23a8571848d1/en/2x3/320x480/89ef06bc03c5726b4bb765b96ff077dd_1280x1920.webp" alt="">
+          
+        </div>
+        <div class="card">
+            <img src="https://qqcdnpictest.mxplay.com/pic/10513adbae0cfd7f5d89b3e0089b3561/en/2x3/320x480/test_pic1594206435111.webp" alt="">
+           
+        </div>
+        <div class="card">
+            <img src="https://qqcdnpictest.mxplay.com/pic/7ba8e625318556cb513f181baa60b821/en/2x3/320x480/test_pic1663593615657.webp" alt="">
+            
+        </div>
+       
+        
+    </div>
+
+    <div class="card2" id="result" hidden>
+    <div class="row">
+        <div style="width: 30%;">
+        <img style="width: 100%;" src="" id="image" alt=""></div>
+        <div style="width: 70%;padding: 50px ;">
+            <h1 id="title"></h1>
+            <h4 id="genre"></h4>
+            <p id="description"></p>
+            <div class="row">
+                <h4 class="detail-title">Release year :</h4>
+                <p class="detail" id="year"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Movie writer :</h4>
+                <p  class="detail" id="writer"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Movie director :</h4>
+                <p  class="detail" id="director"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Actors :</h4>
+                <p  class="detail" id="actors"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Awards:</h4>
+                <p  class="detail" id="awards"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Average rating :</h4>
+                <p  class="detail" id="rating"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Critic score :</h4>
+                <p  class="detail" id="metascore"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Movie length :</h4>
+                <p  class="detail" id="runtime"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Boxoffice collection :</h4>
+                <p  class="detail" id="boxoffice"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Viewer rating :</h4>
+                <p  class="detail" id="rated"></p>
+            </div>
+            <div class="row">
+                <h4 class="detail-title">Movie type :</h4>
+                <p  class="detail" id="type"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+      
+        const getData = async function(moviename){
+            let link = `http://www.omdbapi.com/?t=${moviename}&plot=full&apikey=2467ae4b`;
+            const res = await fetch(link);  // send request to the server
+            // alert(res.status);
+            if(res.status==200){
+                Swal.fire({
+                    icon:'success',
+                    title:'movie found'
+                })
+            }else{
+                Swal.fire({
+                    icon:'error',
+                    title:'movie not found'
+                })
+            }
+            const data = await res.json();  // get data from the response
+            console.log(data);
+            document.querySelector('#result').removeAttribute('hidden');
+            //displaying data on screen 
+            document.querySelector('#image').setAttribute('src', data.Poster);
+            document.querySelector('#title').innerHTML = data.Title;
+            document.querySelector('#genre').innerHTML = data.Genre;
+            document.querySelector('#description').innerHTML = data.Plot;
+            document.querySelector('#year').innerHTML = data.Year;
+            document.querySelector('#writer').innerHTML = data.Writer;
+            document.querySelector('#director').innerHTML = data.Director;
+            document.querySelector('#actors').innerHTML = data.Actors;
+            document.querySelector('#awards').innerHTML = data.Awards;
+            document.querySelector('#rating').innerHTML = data.imdbRating;
+            document.querySelector('#metascore').innerHTML = data.Metascore;
+            document.querySelector('#runtime').innerHTML = data.Runtime;
+            document.querySelector('#boxoffice').innerHTML = data.BoxOffice;
+            document.querySelector('#rated').innerHTML = data.Rated;
+            document.querySelector('#type').innerHTML = data.Type;
+            
+
+        };
+
+        const getInputData = async function(){
+            const userinput = document.querySelector('#search').value;
+            console.log(userinput);
+            await getData(userinput);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        VanillaTilt.init(document.querySelector('.card2'),{
+            max:5,
+            speed:500,
+            glare:true
+        });
+    </script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <script>
+        new Typewriter("#project-title", {
+            strings: ["Hollywood Movies","Bollywood Movies","Web Series"],
+            autoStart:true,
+            loop:true,
+        });
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        ScrollReveal().reveal('.search',{
+            delay:500,
+            duration:1000,
+            origin:'right',
+            distance:'200px'
+        });
+    </script>
+   
+
+
+     
+</body>
+</html>
